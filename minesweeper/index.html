@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper Premium</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+    <div class="game-container">
+        <header class="game-header">
+            <h1>Minesweeper</h1>
+            <div class="controls">
+                <select id="difficulty" title="난이도">
+                    <option value="easy">초급 (9x9)</option>
+                    <option value="medium">중급 (16x16)</option>
+                    <option value="hard">고급 (30x16)</option>
+                </select>
+                <button id="restart-btn" class="icon-btn">😊</button>
+            </div>
+        </header>
+
+        <section class="game-dashboard">
+            <div class="dashboard-item">
+                <span class="icon">🚩</span>
+                <span id="mine-count" class="digital-text">010</span>
+            </div>
+            <div class="dashboard-item">
+                <span class="icon">⏱️</span>
+                <span id="timer" class="digital-text">000</span>
+            </div>
+        </section>
+
+        <section class="board-container">
+            <div id="game-board" class="game-board"></div>
+        </section>
+        
+        <div id="game-over-overlay" class="overlay hidden">
+            <h2 id="end-message">Game Over</h2>
+            <button id="play-again-btn">다시 하기</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
